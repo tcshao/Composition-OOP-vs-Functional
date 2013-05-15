@@ -5,6 +5,29 @@ This is a small example written in C# that has a simple composition using shapes
 
 The purpose of this is to illustrate how functional techniques/languages cut away some of the ceremony involved in C#.
 
+This is an example of the C# code
+
+    public interface IShape
+    {
+        dynamic GetArea();
+    }
+
+    public class Circle : IShape
+    {
+        public float Radius { get; set; }
+
+        public Circle(float radius)
+        {
+            Radius = radius;
+        }
+
+        public dynamic GetArea()
+        {
+            return Math.PI*Radius*Radius;
+        }
+    }
+    // a seperate class is required implementing the IShape interface 
+
 The given class structure and methods can be distilled into the following F#
 
 	// Discriminated Union for the Shape type
