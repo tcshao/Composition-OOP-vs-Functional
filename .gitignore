@@ -2,6 +2,7 @@
 bin
 obj
 _Resharper.Geometry
+*.suo
 
 # mstest test results
 TestResults
